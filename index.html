@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      div {
+        /* transform: rotate(0.5turn); */
+        /* transform: rotateX(0.95turn) rotateY(.15turn) rotateZ(0.95turn); */
+        /* transform: scale(0.5,1); */
+      }
+      .parent {
+        padding: 10px;
+        background-color: lightcyan;
+      }
+
+      .child {
+        width: 200px;
+        height: 200px;
+        background-color: chocolate;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        /* transition: margin-left 2s, transform 2s; */
+        animation: new 5s  ease-in 1s infinite reverse;
+      }
+
+      .child:hover {
+        /* margin-left: 100px; */
+        /* transform: rotateX(0.90turn) rotateY(0.1turn) rotateZ(0.95turn); */
+      }
+
+      /* ACA DEBO COLOCAR LA ANIMACION */
+      @keyframes new {
+        from {
+            transform: rotateX(0.90turn) rotateY(0.1turn) rotateZ(0.95turn);
+        }
+        to {
+            transform: rotateX(0.80turn) rotateY(0.15turn) rotateZ(0.85turn);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">Box</div>
+    </div>
+  </body>
 </html>
